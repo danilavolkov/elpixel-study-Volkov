@@ -33,3 +33,21 @@ for (let i = stringfurina.length - 1; i >=0; i--){
 [5, 6]
 */
 
+let hanna = [1, 2, 3, 4, 5, 6];
+for (let i = 0; i < hanna.length; i +=2){
+    let hanna2 = [hanna[i], hanna[i + 1]];
+    console.log(hanna2);
+}
+
+/*
+Даны два массива:
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+Слейте эти массивы в новый массив:
+[1, 2, 3, 4, 5, 6]
+*/
+
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let tryghole = arr1.concat(arr2);
+console.log(tryghole);
