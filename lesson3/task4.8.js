@@ -95,4 +95,22 @@ function ytr(n, min, max){
 /*
 Сделайте функцию, которая заполнит массив N случайными числами из заданного промежутка так, чтобы числа не повторялись.
 */
-
+function frfr(n, min, max) {
+    let jhjh = max - min + 1;
+    if (n > jhjh) {
+        console.log('чисел меньше');
+        return [];
+    }
+    
+    let arr = [];
+    
+    while (arr.length < n) {
+        let ran = Math.floor(Math.random() * (max - min + 1)) + min;
+        
+        if (!arr.includes(ran)) {
+            arr.push(ran);
+        }
+    }
+    
+    return arr;
+}
