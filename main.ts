@@ -44,8 +44,8 @@ let user2: User2 = new User2(300);
 console.log(user2.age);
 
 class Student {
-	public static speciality: string = 'govnoed';
-    public static universety: string = 'govnoedova';
+	public static speciality: string = 'figur';
+    public static universety: string = 'figuristie';
 }
 
 console.log(Student.speciality);
@@ -93,7 +93,20 @@ let calc: IMath = {
 interface IUser {
     user: string;
     age: number;
-
-    
+    proverka(age: number): string;
 }
+let user23: IUser ={
+    user: 'Penilopa',
+    age: 14,
+
+    proverka(age: number): string {
+        if (age < 18){
+            return 'а ну ка иди отсюда, малолеточка!';
+        } else {
+            return 'добро пожаловать к нам, мисстер/мисс';
+        }
+    }
+}
+
+console.log(user23.proverka(12));
 
