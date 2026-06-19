@@ -82,12 +82,18 @@ console.log(Calc.getQube(res));
 interface IMath {
     num1: number;
     num2: number;
+    getSum(num1: number, num2: number): number;
 }
 
 let calc: IMath = {
     num1: 22,
-    num2: 21
+    num2: 21,
+    getSum(num1: number, num2: number): number{
+        return num1 + num2;
+    }
+    
 }
+console.log(calc.getSum(22,21));
 
 
 interface IUser {
@@ -95,7 +101,7 @@ interface IUser {
     age: number;
     proverka(age: number): string;
 }
-let user23: IUser ={
+let user23: IUser = {
     user: 'Penilopa',
     age: 14,
 
@@ -109,4 +115,47 @@ let user23: IUser ={
 }
 
 console.log(user23.proverka(12));
+
+
+interface IDate {
+    day?: string;
+    month?: string;
+    year?: string;
+}
+
+let date: IDate = {   }
+console.log(date.day); 
+
+interface IUser2 {
+    readonly salary: number;
+    ubitki: number;
+}
+
+let proverit: IUser2 = {
+    salary: 500,
+    ubitki: 400
+}
+
+function func <T>(data: T):T {
+    return data;
+}
+
+console.log(func(2));
+
+function myFunc <T>(data: T[]):T[] {
+    for(let i = 0; i < data.length; i++){
+        console.log(data[i]);
+    }
+    return data;
+}
+console.log(myFunc([1, 'lil', 3, 'lala', 5]));
+
+
+function myFunc2 <T>(data: T[]): T[]{
+    console.log(data.length);
+    return data;
+}
+
+let func23: <U> (data: U[]) => U[] = myFunc2;
+
 
